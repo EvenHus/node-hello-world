@@ -19,15 +19,15 @@
 const fs = require('fs');
 
 var originalNote = {
-    title: 'Some title',
-    body: 'Some title'
+  title: 'Some title',
+  body: 'Some title'
 };
 
 var saveString = JSON.stringify(originalNote);
 
 fs.writeFileSync('notes.js', saveString);
 
-var noteString  = fs.readFileSync('notes.js');
+var noteString = fs.readFileSync('notes.js');
 
 var note = JSON.parse(noteString);
 
